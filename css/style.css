@@ -4,20 +4,20 @@
    ========================================================================== */
 
 html {
-    font-size: 17.5px;
+    font-size: 20px;
     transition: font-size 0.2s ease;
 }
 
 html.font-size-small {
-    font-size: 15px;
-}
-
-html.font-size-normal {
     font-size: 17.5px;
 }
 
+html.font-size-normal {
+    font-size: 20px;
+}
+
 html.font-size-large {
-    font-size: 21px;
+    font-size: 24px;
 }
 
 :root {
@@ -42,7 +42,7 @@ body.theme-fresh {
     font-family: var(--font-main);
     color: var(--cam-dark);
     background-color: var(--cam-grey);
-    padding-top: 62px;
+    padding-top: 80px;
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -65,13 +65,13 @@ body.theme-fresh {
    1. CAMBRIDGE FIXED-TOP HEADER
    -------------------------------------------------- */
 .main-nav-section {
-    min-height: 62px;
+    min-height: 80px;
     z-index: 1030;
 }
 
 .main-nav {
     background-color: #fff;
-    min-height: 62px;
+    min-height: 80px;
     padding: 0 16px;
     display: flex !important;
     flex-direction: row !important;
@@ -133,8 +133,8 @@ body.theme-fresh {
 }
 
 .main-nav .cam-logo {
-    height: 46px;
-    max-width: 320px;
+    height: 54px;
+    max-width: 340px;
     width: auto;
     margin: 0 !important;
     flex-shrink: 0;
@@ -159,7 +159,7 @@ body.theme-fresh {
 .main-nav .icon-search::before {
     content: "\F52A";
     font-family: "bootstrap-icons";
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin-right: 6px;
     color: #000;
 }
@@ -167,7 +167,7 @@ body.theme-fresh {
 .main-nav .icon-menu::before {
     content: "\F479";
     font-family: "bootstrap-icons";
-    font-size: 1.45rem;
+    font-size: 1.55rem;
     margin-right: 6px;
     color: #000;
 }
@@ -180,7 +180,7 @@ body.theme-fresh {
 }
 
 .main-nav .with-contrast {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #000;
     display: inline-block;
@@ -207,7 +207,7 @@ body.theme-fresh {
 }
 
 .sidenav-container-section {
-    min-height: 62px;
+    min-height: 80px;
     z-index: 10000;
 }
 
