@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>งานวิจัยและวารสารวิชาการ | Southern College of Technology (SCT)</title>
+    <meta name="description" content="ศูนย์กลางการเผยแพร่ผลงานวิจัย วารสารวิชาการ SCT มาตรฐาน TCI กลุ่มที่ 1 การประชุมวิชาการระดับชาติ และทุนสนับสนุนงานวิจัย">
+    <link rel="icon" href="images/sct_cambridge_logo.svg" type="image/svg+xml">
+
+    <!-- Fonts: TH Sarabun New / Sarabun (Active) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- macOS Font (เปิดใช้งานให้ลบคอมเมนต์ออก):
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    -->
+
+    <!-- Bootstrap 5 & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Cambridge Fresh CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-fresh">
+    <a href="#main-content" class="visually-hidden focusable">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <div id="page-wrapper">
+        <div id="page" class="bg-grey">
+
+            <!-- ========================================================
+                 HEADER: EXACT CAMBRIDGE FIXED-TOP & SIDENAV
+                 ======================================================== -->
+            <div id="header">
+                <div class="section clearfix">
+
+                    <!-- Main Navigation Section (White) -->
+                    <section class="fixed-top main-nav-section bg-white">
+                        <div class="container">
+                            <nav class="d-flex justify-content-between align-items-center flex-nowrap w-100 main-nav">
+                                <a class="item d-flex align-items-center" href="index.html">
+                                    <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" />
+                                </a>
+                                <div class="item text-dark nav-right-items d-flex align-items-center ms-auto">
+                                    <a href="javascript:void(0)" onclick="toggleSearch()" class="search-trigger-link text-decoration-none me-4">
+                                        <span class="icon icon-search"><span class="sr-only with-contrast">Search</span></span>
+                                    </a>
+                                    <button class="bg-white border-0 p-0" onclick="openNavR()" aria-label="Open navigation menu">
+                                        <span class="icon icon-menu"><span class="sr-only with-contrast"> Menu</span></span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Expandable Search Bar -->
+                        <div id="search-bar-dropdown" class="search-dropdown-wrap bg-light border-bottom d-none py-3">
+                            <div class="container">
+                                <div class="input-group">
+                                    <input type="text" id="site-search-input" class="form-control" placeholder="ค้นหาบทความวิจัย, วารสาร TCI, ทุนวิจัย, หรือการประชุมวิชาการ...">
+                                    <button class="btn btn-primary text-dark fw-bold" type="button" onclick="handleSearch()">ค้นหา</button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="toggleSearch()">ปิด</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Exact Cambridge Sidenav Container -->
+                    <section class="fixed-top sidenav-container-section pointer-events-none">
+                        <div class="container pr-0 pl-0">
+                            <div class="relativepos">
+                                <div class="sidenavR pointer-events-auto" id="mySidenavR">
+                                    <button class="closebtn bg-primary" onclick="closeNavR()" aria-label="Close navigation menu">
+                                        <span class="icon icon-close p-3"></span>
+                                        <span class="sr-only"> Close</span>
+                                    </button>
+                                    <div class="pt-4">
+                                        <div>
+                                            <nav role="navigation" aria-labelledby="block-fresh-homepageslider-menu" id="block-fresh-homepageslider">
+                                                <h2 class="visually-hidden" id="block-fresh-homepageslider-menu">Homepage - slider</h2>
+                                                <ul>
+                                                    <li><a href="competitions.html" onclick="closeNavR()">รายการประกวดและแข่งขัน</a></li>
+                                                    <li><a href="research.html" onclick="closeNavR()" class="text-primary font-weight-bold">งานวิจัย & วารสารวิชาการ</a></li>
+                                                    <li><a href="index.html#news" onclick="closeNavR()">ข่าวสารและประกาศสถาบัน</a></li>
+                                                    <li><a href="download.html" onclick="closeNavR()">ดาวน์โหลดเอกสารแบบฟอร์ม</a></li>
+                                                    <li><a href="contact.html" onclick="closeNavR()">ติดต่อเรา</a></li>
+                                                    <li><a href="https://www.sct.ac.th" target="_blank">เว็บไซต์หลักวิทยาลัย SCT <i class="bi bi-arrow-up-right small"></i></a></li>
+                                                    <li><a href="index.html#global-footer" onclick="closeNavR()">เกี่ยวกับวิทยาลัยและข้อมูลติดต่อ</a></li>
+                                                </ul>
+                                            </nav>
+
+                                            <!-- Sidenav Font Resizer Controls -->
+                                            <div class="sidenav-font-resizer px-4 pt-3 mt-3 border-top border-dark-subtle">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="small font-weight-bold text-dark">ขนาดตัวอักษร:</span>
+                                                    <div class="font-resizer-wrap d-flex align-items-center" role="group" aria-label="ปรับขนาดตัวอักษร">
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('small')" title="ลดขนาดตัวอักษร" aria-label="ลดขนาดตัวอักษร">A-</button>
+                                                        <button type="button" class="btn-font-resize active" onclick="setFontSize('normal')" title="ขนาดตัวอักษรปกติ" aria-label="ขนาดตัวอักษรปกติ">A</button>
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('large')" title="เพิ่มขนาดตัวอักษร" aria-label="เพิ่มขนาดตัวอักษร">A+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="sidenavOverlay" class="drawer-backdrop" onclick="closeNavR()"></div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 PAGE CONTENT: RESEARCH & ACADEMIC JOURNALS
+                 ======================================================== -->
+            <div id="main-content" class="py-4">
+                <div class="container">
+
+                    <!-- Breadcrumbs -->
+                    <nav aria-label="breadcrumb" class="mb-3">
+                        <ol class="breadcrumb bg-transparent p-0 small">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">หน้าหลัก</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">งานวิจัยและวารสารวิชาการ</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Page Header Banner (Exact Cambridge Hero Dimensions Matching Index) -->
+                    <div class="row margin-adjust mb-5">
+                        <div class="col-12 p-0">
+                            <div class="hero-container position-relative">
+                                <div class="field-name-field-para-hero-image">
+                                    <div class="field-items">
+                                        <div class="field-item even">
+                                            <img loading="eager"
+                                                 src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1600&q=80"
+                                                 width="1280" height="666"
+                                                 alt="งานวิจัยและวารสารวิชาการ SCT"
+                                                 class="img-fluid hero-banner-img" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cambridge Two-Tone Panel Overlaid on Hero -->
+                                <div class="homepage-hero-panel">
+                                    <div class="hero-title-box bg-white p-4 p-md-5">
+                                        <span class="badge bg-primary text-dark mb-3 px-3 py-2 small fw-bold">
+                                            <i class="bi bi-journal-bookmark-fill me-1"></i> วิจัย นวัตกรรม และบริการวิชาการ
+                                        </span>
+                                        <h1 class="headline font-weight-bold text-dark m-0">
+                                            งานวิจัย &<br>วารสารวิชาการ
+                                        </h1>
+                                    </div>
+                                    <div class="hero-teaser-box bg-black text-white p-3 p-md-4">
+                                        <p class="mb-0 text-white small">
+                                            ศูนย์กลางการเผยแพร่ผลงานวิจัย นวัตกรรม และบทความวิชาการคุณภาพสูง ขับเคลื่อนพันธกิจวิจัยสู่ความยั่งยืน (SDGs) พร้อมวารสารวิชาการ SCT ผ่านการรับรองมาตรฐาน TCI กลุ่มที่ 1
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter & Search Section -->
+                    <div class="card border-0 shadow-sm p-3 mb-5 bg-white">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-7 col-lg-8">
+                                <!-- Category Filter Buttons -->
+                                <div class="d-flex flex-wrap gap-2" id="research-filter-buttons">
+                                    <button class="btn btn-sm btn-dark active filter-btn" onclick="filterResearch('all', this)">ทั้งหมด</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterResearch('journal', this)">วารสารวิชาการ TCI</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterResearch('conference', this)">การประชุมวิชาการ</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterResearch('grants', this)">ทุนอุดหนุนวิจัย</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterResearch('ethics-ip', this)">จริยธรรมวิจัย & ทรัพย์สินทางปัญญา</button>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-lg-4">
+                                <!-- Search Input -->
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                                    <input type="text" id="research-search-input" class="form-control border-start-0" placeholder="ค้นหางานวิจัย, วารสาร, หรือทุน..." onkeyup="searchResearch()">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="clearResearchSearch()">ล้าง</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         RESEARCH & JOURNALS GRID (NEWS & ANNOUNCEMENTS STYLE)
+                         Clean Editorial Layout (No card border/background)
+                         ======================================================== -->
+                    <div class="row margin-adjust g-4" id="research-grid">
+
+                        <!-- Item 1: SCT Academic Journal (TCI Tier 1) -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="journal" data-title="วารสารวิชาการเทคโนโลยีภาคใต้ sct academic journal tci กลุ่ม 1 thaijo">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="https://www.sct.ac.th" target="_blank" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="วารสารวิชาการ SCT">
+                                        <span class="badge bg-success text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-award-fill me-1"></i> TCI กลุ่มที่ 1 (Indexed)
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">วารสารวิชาการเทคโนโลยีภาคใต้ (SCT Academic Journal)</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    เผยแพร่บทความวิจัยและบทความวิชาการด้านวิทยาศาสตร์ เทคโนโลยี บริหารธุรกิจ และมนุษยศาสตร์สังคมศาสตร์ ตีพิมพ์ปีละ 2 ฉบับ ได้รับการรับรองคุณภาพมาตรฐาน TCI กลุ่ม 1 อย่างต่อเนื่อง
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-muted"><i class="bi bi-journal-text me-1"></i> ฉบับล่าสุด: Vol.17 No.2</span>
+                                    <a href="https://www.sct.ac.th" target="_blank" class="small font-weight-bold text-primary text-decoration-none">ส่งบทความ (ThaiJO) →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: National Conference (SCT Conference 17th) -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="conference" data-title="การประชุมวิชาการระดับชาติ ครั้งที่ 17 sct national conference proceedings">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="SCT Conference 17th">
+                                        <span class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-calendar-event me-1"></i> Call for Papers
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">การประชุมวิชาการระดับชาติ ครั้งที่ 17 (SCT Conference 2026)</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    ขอเชิญร่วมส่งบทความวิจัยนำเสนอในงานประชุมวิชาการระดับชาติ ประจำปีการศึกษา 2569 หัวข้อ "นวัตกรรมและการวิจัยเพื่อการขับเคลื่อนความยั่งยืน (SDGs)" พร้อมตีพิมพ์ใน Proceedings
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> จัดประชุม: 25 พ.ค. 2569</span>
+                                    <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="small font-weight-bold text-primary text-decoration-none">ส่งบทความวิจัย →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Research Grants & Funding -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="grants" data-title="ทุนอุดหนุนการวิจัยและนวัตกรรม ประจำปีงบประมาณ 2569 fundamental fund">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="download.html" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Research Funding">
+                                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-cash-coin me-1"></i> ทุนวิจัยสถาบัน 2569
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">ทุนอุดหนุนการวิจัยและนวัตกรรม ประจำปีงบประมาณ 2569</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    เปิดรับข้อเสนอโครงการวิจัยเพื่อขอรับทุนสนับสนุนประเภท Fundamental Fund (FF) และทุนวิจัยพัฒนานวัตกรรมชุมชน มุ่งเน้นสร้างผลกระทบเชิงเศรษฐกิจและสังคมสู่ความยั่งยืน
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 30 เม.ย. 2569</span>
+                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">แบบฟอร์ม ว-1ด →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Institutional Repository -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="journal" data-title="คลังปัญญาและฐานข้อมูลงานวิจัยสถาบัน sct institutional repository open access">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="https://www.sct.ac.th" target="_blank" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Institutional Repository">
+                                        <span class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-database-check me-1"></i> Open Access IR
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">คลังปัญญาและฐานข้อมูลงานวิจัยสถาบัน (SCT IR)</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    แหล่งรวบรวมและจัดเก็บผลงานวิจัย วิทยานิพนธ์ และผลงานตีพิมพ์ทางวิชาการของคณาจารย์และนักศึกษาวิทยาลัยเทคโนโลยีภาคใต้ในรูปแบบดิจิทัลแบบเปิด สามารถเข้าถึงได้ทุกที่
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-muted"><i class="bi bi-file-earmark-pdf me-1"></i> เอกสารฉบับเต็ม</span>
+                                    <a href="https://www.sct.ac.th" target="_blank" class="small font-weight-bold text-primary text-decoration-none">เข้าสู่ระบบสืบค้น →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Human Research Ethics (IRB) -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="ethics-ip" data-title="คณะกรรมการจริยธรรมการวิจัยในมนุษย์ sct human research ethics irb">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="download.html" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Human Research Ethics">
+                                        <span class="badge bg-secondary text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-shield-check me-1"></i> มาตรฐานจริยธรรม
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">คณะกรรมการจริยธรรมการวิจัยในมนุษย์ (SCT-IRB)</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    ให้บริการพิจารณารับรองจริยธรรมการวิจัยในมนุษย์ตามมาตรฐานสากล สำหรับโครงการวิจัยด้านสังคมศาสตร์ พฤติกรรมศาสตร์ สุขภาพ และวิทยาศาสตร์ประยุกต์
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-muted"><i class="bi bi-calendar3 me-1"></i> รอบพิจารณาทุกเดือน</span>
+                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดแบบขอรับรอง →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Intellectual Property (IP & Patent) -->
+                        <div class="col-lg-4 col-md-6 article research-card-item" data-category="ethics-ip" data-title="ศูนย์ทรัพย์สินทางปัญญาและการถ่ายทอดเทคโนโลยี sct tlo patent copyright">
+                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                <a href="download.html" class="text-decoration-none">
+                                    <div class="position-relative">
+                                        <img loading="lazy" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Intellectual Property">
+                                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                            <i class="bi bi-lightbulb-fill me-1"></i> สิทธิบัตร & นวัตกรรม
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-dark font-weight-bold">ศูนย์ทรัพย์สินทางปัญญาและการถ่ายทอดเทคโนโลยี (SCT TLO)</h3>
+                                </a>
+                                <div class="news-summary text-muted mb-2">
+                                    บริการให้คำปรึกษา การยื่นจดทะเบียนสิทธิบัตร อนุสิทธิบัตร ลิขสิทธิ์ และการทำสัญญาถ่ายทอดเทคโนโลยีจากงานวิจัยสู่ภาคอุตสาหกรรมและชุมชนเชิงพาณิชย์
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-muted"><i class="bi bi-building me-1"></i> ฝ่ายวิจัยและบริการวิชาการ</span>
+                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">แบบฟอร์มขอรับคำปรึกษา →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- No Results Placeholder -->
+                    <div id="no-research-message" class="text-center py-5 d-none">
+                        <i class="bi bi-search text-muted display-4 mb-3"></i>
+                        <h4 class="h5 text-dark">ไม่พบข้อมูลงานวิจัยที่ตรงกับคำค้นหา</h4>
+                        <p class="text-muted small">กรุณาลองใช้คำค้นหาอื่น หรือเลือกหมวดหมู่งานวิจัยใหม่อีกครั้ง</p>
+                        <button class="btn btn-primary text-dark fw-bold btn-sm mt-2" onclick="clearResearchSearch()">ดูงานวิจัยทั้งหมด</button>
+                    </div>
+
+                    <!-- Bottom Help / Submission CTA Box -->
+                    <div class="card border-0 shadow-sm p-4 bg-white mt-5">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                            <div>
+                                <h4 class="h6 font-weight-bold text-dark mb-1">ต้องการส่งบทความวิจัย หรือสอบถามข้อมูลการตีพิมพ์วารสาร?</h4>
+                                <p class="text-muted small mb-0">ฝ่ายวิจัยและบริการวิชาการ วิทยาลัยเทคโนโลยีภาคใต้ โทร. 0-7577-0136-7 หรืออีเมล research-support@sct.ac.th</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="download.html" class="btn btn-outline-dark fw-bold text-nowrap">
+                                    <i class="bi bi-download me-1"></i> แบบฟอร์มวิจัย
+                                </a>
+                                <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="btn btn-primary text-dark fw-bold text-nowrap">
+                                    <i class="bi bi-send me-1"></i> ส่งบทความวิจัย
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 GLOBAL FOOTER: CAMBRIDGE 4-COLUMN DESIGN
+                 ======================================================== -->
+            <div id="global-footer">
+                <div class="section container py-5">
+                    <div class="region region-global-footer row g-4">
+
+                        <div class="col-md-6 col-lg-3">
+                            <a class="item d-flex align-items-center gap-2 text-decoration-none text-white mb-3" href="index.html">
+                                <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" style="filter: brightness(0) invert(1);" />
+                            </a>
+                            <div class="content text-secondary small">
+                                <p>&copy; 2026 วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)</p>
+                                <p class="mb-2">124 ม.7 ถ.ทุ่งสง-ห้วยยอด ต.ที่วัง อ.ทุ่งสง จ.นครศรีธรรมราช 80110</p>
+                                <p class="mb-0">โทรศัพท์: 0-7577-0136-7<br>อีเมล: research-support@sct.ac.th</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">รายการประกวด & แข่งขัน</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การประกวดโครงงานนวัตกรรม</a></li>
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">ประกวดบทความวิจัยดีเด่น</a></li>
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การแข่งขันแผนธุรกิจสตาร์ทอัพ</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มการประกวด</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">งานวิจัยที่ตีพิมพ์</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">งานวิจัย & วารสารวิชาการ SCT</a></li>
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-secondary text-decoration-none">SCT Conference Proceedings</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย</a></li>
+                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">เป้าหมายความยั่งยืน SDGs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">ข่าวสารและการติดต่อ</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="index.html#news" class="text-secondary text-decoration-none">ข่าวสารและประกาศสถาบัน</a></li>
+                                    <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">ติดต่อเรา & แผนที่เดินทาง</a></li>
+                                    <li class="mb-2"><a href="javascript:void(0)" onclick="alert('ระบบคุ้มครองข้อมูลส่วนบุคคลตาม พ.ร.บ. PDPA พ.ศ. 2562')" class="text-secondary text-decoration-none">นโยบายความเป็นส่วนตัว (PDPA)</a></li>
+                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank" class="text-secondary text-decoration-none">เกี่ยวกับวิทยาลัยเทคโนโลยีภาคใต้</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Application Logic (Drawer, Search, Events) -->
+    <script src="js/app.js"></script>
+
+    <!-- Inline Filter & Search Script for Research Page -->
+    <script>
+        let currentResearchCategory = 'all';
+
+        function filterResearch(category, btn) {
+            currentResearchCategory = category;
+
+            // Update active state of buttons
+            document.querySelectorAll('#research-filter-buttons .filter-btn').forEach(b => {
+                b.classList.remove('btn-dark', 'active');
+                b.classList.add('btn-outline-secondary');
+            });
+            btn.classList.remove('btn-outline-secondary');
+            btn.classList.add('btn-dark', 'active');
+
+            applyResearchFilters();
+        }
+
+        function searchResearch() {
+            applyResearchFilters();
+        }
+
+        function clearResearchSearch() {
+            const searchInput = document.getElementById('research-search-input');
+            if (searchInput) searchInput.value = '';
+
+            const allBtn = document.querySelector('#research-filter-buttons .filter-btn');
+            if (allBtn) filterResearch('all', allBtn);
+        }
+
+        function applyResearchFilters() {
+            const query = (document.getElementById('research-search-input')?.value || '').toLowerCase().trim();
+            const cards = document.querySelectorAll('.research-card-item');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const title = (card.getAttribute('data-title') || '').toLowerCase();
+                const text = card.textContent.toLowerCase();
+
+                const matchesCategory = (currentResearchCategory === 'all' || category === currentResearchCategory);
+                const matchesSearch = (!query || title.includes(query) || text.includes(query));
+
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('d-none');
+                    visibleCount++;
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+
+            // Toggle no results message
+            const noResults = document.getElementById('no-research-message');
+            if (noResults) {
+                if (visibleCount === 0) {
+                    noResults.classList.remove('d-none');
+                } else {
+                    noResults.classList.add('d-none');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา | Southern College of Technology (SCT)</title>
+    <meta name="description" content="ช่องทางการติดต่อ แผนที่การเดินทาง และแบบฟอร์มสอบถามข้อมูล วิทยาลัยเทคโนโลยีภาคใต้ (SCT)">
+    <link rel="icon" href="images/sct_cambridge_logo.svg" type="image/svg+xml">
+
+    <!-- Fonts: TH Sarabun New / Sarabun (Active) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- macOS Font (เปิดใช้งานให้ลบคอมเมนต์ออก):
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    -->
+
+    <!-- Bootstrap 5 & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Cambridge Fresh CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-fresh">
+    <a href="#main-content" class="visually-hidden focusable">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <div id="page-wrapper">
+        <div id="page" class="bg-grey">
+
+            <!-- ========================================================
+                 HEADER: EXACT CAMBRIDGE FIXED-TOP & SIDENAV
+                 ======================================================== -->
+            <div id="header">
+                <div class="section clearfix">
+
+                    <!-- Main Navigation Section (White) -->
+                    <section class="fixed-top main-nav-section bg-white">
+                        <div class="container">
+                            <nav class="d-flex justify-content-between align-items-center flex-nowrap w-100 main-nav">
+                                <a class="item d-flex align-items-center" href="index.html">
+                                    <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" />
+                                </a>
+                                <div class="item text-dark nav-right-items d-flex align-items-center ms-auto">
+                                    <a href="javascript:void(0)" onclick="toggleSearch()" class="search-trigger-link text-decoration-none me-4">
+                                        <span class="icon icon-search"><span class="sr-only with-contrast">Search</span></span>
+                                    </a>
+                                    <button class="bg-white border-0 p-0" onclick="openNavR()" aria-label="Open navigation menu">
+                                        <span class="icon icon-menu"><span class="sr-only with-contrast"> Menu</span></span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Expandable Search Bar -->
+                        <div id="search-bar-dropdown" class="search-dropdown-wrap bg-light border-bottom d-none py-3">
+                            <div class="container">
+                                <div class="input-group">
+                                    <input type="text" id="site-search-input" class="form-control" placeholder="ค้นหารายการประกวด, ข่าวสาร, หรือชื่องานวิจัย...">
+                                    <button class="btn btn-primary text-dark fw-bold" type="button" onclick="handleSearch()">ค้นหา</button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="toggleSearch()">ปิด</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Exact Cambridge Sidenav Container -->
+                    <section class="fixed-top sidenav-container-section pointer-events-none">
+                        <div class="container pr-0 pl-0">
+                            <div class="relativepos">
+                                <div class="sidenavR pointer-events-auto" id="mySidenavR">
+                                    <button class="closebtn bg-primary" onclick="closeNavR()" aria-label="Close navigation menu">
+                                        <span class="icon icon-close p-3"></span>
+                                        <span class="sr-only"> Close</span>
+                                    </button>
+                                    <div class="pt-4">
+                                        <div>
+                                            <nav role="navigation" aria-labelledby="block-fresh-homepageslider-menu" id="block-fresh-homepageslider">
+                                                <h2 class="visually-hidden" id="block-fresh-homepageslider-menu">Homepage - slider</h2>
+                                                <ul>
+                                                    <li><a href="competitions.html" onclick="closeNavR()">รายการประกวดและแข่งขัน</a></li>
+                                                    <li><a href="research.html" onclick="closeNavR()">งานวิจัย & วารสารวิชาการ</a></li>
+                                                    <li><a href="index.html#news" onclick="closeNavR()">ข่าวสารและประกาศสถาบัน</a></li>
+                                                    <li><a href="download.html" onclick="closeNavR()">ดาวน์โหลดเอกสารแบบฟอร์ม</a></li>
+                                                    <li><a href="contact.html" onclick="closeNavR()" class="text-primary font-weight-bold">ติดต่อเรา</a></li>
+                                                    <li><a href="https://www.sct.ac.th" target="_blank">เว็บไซต์หลักวิทยาลัย SCT <i class="bi bi-arrow-up-right small"></i></a></li>
+                                                    <li><a href="index.html#global-footer" onclick="closeNavR()">เกี่ยวกับวิทยาลัยและข้อมูลติดต่อ</a></li>
+                                                </ul>
+                                            </nav>
+
+                                            <!-- Sidenav Font Resizer Controls -->
+                                            <div class="sidenav-font-resizer px-4 pt-3 mt-3 border-top border-dark-subtle">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="small font-weight-bold text-dark">ขนาดตัวอักษร:</span>
+                                                    <div class="font-resizer-wrap d-flex align-items-center" role="group" aria-label="ปรับขนาดตัวอักษร">
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('small')" title="ลดขนาดตัวอักษร" aria-label="ลดขนาดตัวอักษร">A-</button>
+                                                        <button type="button" class="btn-font-resize active" onclick="setFontSize('normal')" title="ขนาดตัวอักษรปกติ" aria-label="ขนาดตัวอักษรปกติ">A</button>
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('large')" title="เพิ่มขนาดตัวอักษร" aria-label="เพิ่มขนาดตัวอักษร">A+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="sidenavOverlay" class="drawer-backdrop" onclick="closeNavR()"></div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 PAGE CONTENT: CONTACT US & DIRECTORY
+                 ======================================================== -->
+            <div id="main-content" class="py-4">
+                <div class="container">
+
+                    <!-- Breadcrumbs -->
+                    <nav aria-label="breadcrumb" class="mb-3">
+                        <ol class="breadcrumb bg-transparent p-0 small">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">หน้าหลัก</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ติดต่อเรา</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Page Header Banner (Exact Cambridge Hero Dimensions Matching Index) -->
+                    <div class="row margin-adjust mb-5">
+                        <div class="col-12 p-0">
+                            <div class="hero-container position-relative">
+                                <div class="field-name-field-para-hero-image">
+                                    <div class="field-items">
+                                        <div class="field-item even">
+                                            <img loading="eager"
+                                                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+                                                 width="1280" height="666"
+                                                 alt="ติดต่อวิทยาลัยเทคโนโลยีภาคใต้ SCT"
+                                                 class="img-fluid hero-banner-img" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cambridge Two-Tone Panel Overlaid on Hero -->
+                                <div class="homepage-hero-panel">
+                                    <div class="hero-title-box bg-white p-4 p-md-5">
+                                        <span class="badge bg-primary text-dark mb-3 px-3 py-2 small fw-bold">
+                                            <i class="bi bi-geo-alt-fill me-1"></i> วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)
+                                        </span>
+                                        <h1 class="headline font-weight-bold text-dark m-0">
+                                            ติดต่อเรา<br>& แผนที่
+                                        </h1>
+                                    </div>
+                                    <div class="hero-teaser-box bg-black text-white p-3 p-md-4">
+                                        <p class="mb-0 text-white small">
+                                            ยินดีต้อนรับคณาจารย์ นักวิจัย นักศึกษา และบุคคลทั่วไป สอบถามข้อมูลงานวิจัย การส่งบทความ การประกวดนวัตกรรม หรือติดต่อประสานงานหน่วยงานภายใน
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Contact Highlight Cards -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="p-3 bg-light rounded-circle text-primary me-3 fs-4">
+                                        <i class="bi bi-geo-alt-fill text-dark"></i>
+                                    </div>
+                                    <h2 class="h5 font-weight-bold text-dark mb-0">ที่ตั้งสถาบัน</h2>
+                                </div>
+                                <p class="text-muted small mb-0">
+                                    124/1 หมู่ 7 ถนนทุ่งสง-ห้วยยอด ตำบลที่วัง อำเภอทุ่งสง จังหวัดนครศรีธรรมราช 80110
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="p-3 bg-light rounded-circle text-primary me-3 fs-4">
+                                        <i class="bi bi-telephone-inbound-fill text-dark"></i>
+                                    </div>
+                                    <h2 class="h5 font-weight-bold text-dark mb-0">ช่องทางติดต่อด่วน</h2>
+                                </div>
+                                <p class="text-muted small mb-1">
+                                    <strong>โทรศัพท์:</strong> 0-7577-0136-7<br>
+                                    <strong>โทรสาร:</strong> 0-7577-0138<br>
+                                    <strong>อีเมล:</strong> contact@sct.ac.th
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-4 h-100 bg-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="p-3 bg-light rounded-circle text-primary me-3 fs-4">
+                                        <i class="bi bi-clock-history text-dark"></i>
+                                    </div>
+                                    <h2 class="h5 font-weight-bold text-dark mb-0">วันและเวลาทำการ</h2>
+                                </div>
+                                <p class="text-muted small mb-0">
+                                    <strong>จันทร์ - ศุกร์:</strong> 08:30 - 16:30 น.<br>
+                                    <strong>เสาร์ - อาทิตย์:</strong> ปิดทำการ (ยกเว้นมีกิจกรรมสัมมนา/การเรียนการสอนพิเศษ)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form & Department Directory -->
+                    <div class="row g-4 mb-5">
+
+                        <!-- Left Column: Interactive Contact Form -->
+                        <div class="col-lg-7">
+                            <div class="card border-0 shadow-sm p-4 p-md-5 bg-white h-100">
+                                <h2 class="h4 font-weight-bold text-dark mb-2">ส่งข้อความติดต่อสอบถาม</h2>
+                                <p class="text-muted small mb-4">กรอกข้อมูลด้านล่าง เจ้าหน้าที่จะติดต่อกลับผ่านทางอีเมลหรือเบอร์โทรศัพท์โดยเร็วที่สุด</p>
+
+                                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="contact-name" class="form-label small font-weight-bold text-dark">ชื่อ - นามสกุล *</label>
+                                            <input type="text" class="form-control" id="contact-name" placeholder="นาย/นาง/น.ส. สมัคร เรียนดี" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-phone" class="form-label small font-weight-bold text-dark">เบอร์โทรศัพท์ติดต่อ *</label>
+                                            <input type="tel" class="form-control" id="contact-phone" placeholder="08x-xxx-xxxx" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-email" class="form-label small font-weight-bold text-dark">อีเมล *</label>
+                                            <input type="email" class="form-control" id="contact-email" placeholder="example@email.com" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="contact-dept" class="form-label small font-weight-bold text-dark">หน่วยงานที่ต้องการติดต่อ *</label>
+                                            <select class="form-select" id="contact-dept" required>
+                                                <option value="" selected disabled>-- เลือกฝ่ายงาน --</option>
+                                                <option value="research">ฝ่ายวิจัยและบริการวิชาการ (วารสาร/ทุนวิจัย)</option>
+                                                <option value="conference">งานประชุมวิชาการ SCT Conference</option>
+                                                <option value="innovation">ฝ่ายพัฒนานวัตกรรมและรายการประกวด</option>
+                                                <option value="mis">งานระบบสารสนเทศ (MIS) / ทะเบียน</option>
+                                                <option value="general">สอบถามทั่วไป / ประชาสัมพันธ์</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="contact-subject" class="form-label small font-weight-bold text-dark">หัวข้อเรื่อง *</label>
+                                            <input type="text" class="form-control" id="contact-subject" placeholder="ระบุหัวข้อที่ต้องการสอบถาม" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="contact-message" class="form-label small font-weight-bold text-dark">รายละเอียดข้อความ *</label>
+                                            <textarea class="form-control" id="contact-message" rows="4" placeholder="พิมพ์ข้อความของท่านที่นี่..." required></textarea>
+                                        </div>
+                                        <div class="col-12 pt-2">
+                                            <button type="submit" class="btn btn-primary text-dark fw-bold px-4 py-2">
+                                                <i class="bi bi-send-fill me-1"></i> ส่งข้อความ
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <!-- Success Alert (Hidden by default) -->
+                                <div id="contact-success-alert" class="alert alert-success d-none mt-4" role="alert">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill fs-4 me-2"></i>
+                                        <div>
+                                            <strong class="d-block">ส่งข้อความเรียบร้อยแล้ว!</strong>
+                                            <span class="small">เจ้าหน้าที่ได้รับข้อมูลของท่านแล้ว และจะติดต่อกลับโดยเร็วที่สุด ขอบคุณครับ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Department Direct Contacts -->
+                        <div class="col-lg-5">
+                            <div class="card border-0 shadow-sm p-4 p-md-5 bg-white h-100">
+                                <h2 class="h4 font-weight-bold text-dark mb-2">เบอร์ติดต่อฝ่ายงานภายใน</h2>
+                                <p class="text-muted small mb-4">ติดต่อตรงไปยังผู้รับผิดชอบงานในแต่ละส่วนงาน</p>
+
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item px-0 py-3">
+                                        <h3 class="h6 font-weight-bold text-dark mb-1">
+                                            <i class="bi bi-journal-check text-primary me-2"></i>ฝ่ายวิจัยและบริการวิชาการ
+                                        </h3>
+                                        <p class="text-muted small mb-1">ดูแลงานวารสารวิชาการ TCI, ทุนวิจัย, จริยธรรมวิจัย (IRB)</p>
+                                        <span class="small text-dark font-weight-bold">โทร. 0-7577-0136 ต่อ 141</span> · 
+                                        <a href="mailto:research-support@sct.ac.th" class="small text-primary text-decoration-none">research-support@sct.ac.th</a>
+                                    </div>
+
+                                    <div class="list-group-item px-0 py-3">
+                                        <h3 class="h6 font-weight-bold text-dark mb-1">
+                                            <i class="bi bi-trophy text-primary me-2"></i>ฝ่ายพัฒนานวัตกรรมและรายการประกวด
+                                        </h3>
+                                        <p class="text-muted small mb-1">ดูแลการส่งโครงงานเข้าประกวด แผนธุรกิจสตาร์ทอัพ และแฮกกาธอน</p>
+                                        <span class="small text-dark font-weight-bold">โทร. 0-7577-0136 ต่อ 152</span> · 
+                                        <a href="mailto:innovation@sct.ac.th" class="small text-primary text-decoration-none">innovation@sct.ac.th</a>
+                                    </div>
+
+                                    <div class="list-group-item px-0 py-3">
+                                        <h3 class="h6 font-weight-bold text-dark mb-1">
+                                            <i class="bi bi-pc-display-horizontal text-primary me-2"></i>ศูนย์คอมพิวเตอร์และสารสนเทศ (MIS)
+                                        </h3>
+                                        <p class="text-muted small mb-1">ดูแลระบบสารสนเทศ บัญชีผู้ใช้งาน และการบริการระบบเครือข่าย</p>
+                                        <span class="small text-dark font-weight-bold">โทร. 0-7577-0136 ต่อ 108</span> · 
+                                        <a href="mailto:mis@sct.ac.th" class="small text-primary text-decoration-none">mis@sct.ac.th</a>
+                                    </div>
+
+                                    <div class="list-group-item px-0 py-3 border-bottom-0">
+                                        <h3 class="h6 font-weight-bold text-dark mb-1">
+                                            <i class="bi bi-building text-primary me-2"></i>สำนักอธิการบดี / ประชาสัมพันธ์
+                                        </h3>
+                                        <p class="text-muted small mb-1">ติดต่อหนังสือราชการ การรับสมัครนักศึกษา และข่าวสารทั่วไป</p>
+                                        <span class="small text-dark font-weight-bold">โทร. 0-7577-0136 ต่อ 101</span> · 
+                                        <a href="mailto:contact@sct.ac.th" class="small text-primary text-decoration-none">contact@sct.ac.th</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Location Google Map Section -->
+                    <div class="card border-0 shadow-sm p-4 p-md-5 bg-white mb-5">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-6">
+                                <h2 class="h4 font-weight-bold text-dark mb-2">แผนที่และการเดินทาง</h2>
+                                <p class="text-muted small mb-4">
+                                    วิทยาลัยเทคโนโลยีภาคใต้ (SCT) ตั้งอยู่บนถนนทุ่งสง-ห้วยยอด ห่างจากตัวอำเภอทุ่งสงประมาณ 5 กิโลเมตร สะดวกต่อการเดินทางด้วยยานพาหนะส่วนบุคคล รถไฟ และรถตู้โดยสารสาธารณะ
+                                </p>
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2"><i class="bi bi-car-front-fill text-dark me-2"></i><strong>รถยนต์ส่วนบุคคล:</strong> ใช้เส้นทาง ทล.403 (ทุ่งสง-ตรัง) เลี้ยวเข้าสู่ทางหลวง 4110 มุ่งหน้า อ.ห้วยยอด</li>
+                                    <li class="mb-2"><i class="bi bi-train-front-fill text-dark me-2"></i><strong>รถไฟ:</strong> ลงที่สถานีรถไฟชุมทางทุ่งสง จากนั้นต่อรถสองแถวหรือรถรับจ้างมายังวิทยาลัย (ประมาณ 10 นาที)</li>
+                                    <li class="mb-2"><i class="bi bi-bus-front-fill text-dark me-2"></i><strong>รถตู้โดยสาร:</strong> สายทุ่งสง-ตรัง หรือ นครศรีฯ-ตรัง สามารถแจ้งลงหน้าวิทยาลัยเทคโนโลยีภาคใต้ได้โดยตรง</li>
+                                </ul>
+                                <div class="pt-2">
+                                    <a href="https://maps.google.com/?q=Southern+College+of+Technology" target="_blank" class="btn btn-outline-dark fw-bold btn-sm">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i> เปิดดูบน Google Maps ขนาดเต็ม
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm border">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15797.77119159937!2d99.64571123164993!3d8.15808871306351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305370259b38466b%3A0x600f937e49aa0182!2sSouthern%20College%20of%20Technology!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth"
+                                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="แผนที่วิทยาลัยเทคโนโลยีภาคใต้"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 GLOBAL FOOTER: CAMBRIDGE 4-COLUMN DESIGN
+                 ======================================================== -->
+            <div id="global-footer">
+                <div class="section container py-5">
+                    <div class="region region-global-footer row g-4">
+
+                        <div class="col-md-6 col-lg-3">
+                            <a class="item d-flex align-items-center gap-2 text-decoration-none text-white mb-3" href="index.html">
+                                <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" style="filter: brightness(0) invert(1);" />
+                            </a>
+                            <div class="content text-secondary small">
+                                <p>&copy; 2026 วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)</p>
+                                <p class="mb-2">124 ม.7 ถ.ทุ่งสง-ห้วยยอด ต.ที่วัง อ.ทุ่งสง จ.นครศรีธรรมราช 80110</p>
+                                <p class="mb-0">โทรศัพท์: 0-7577-0136-7<br>อีเมล: research-support@sct.ac.th</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">รายการประกวด & แข่งขัน</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การประกวดโครงงานนวัตกรรม</a></li>
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">ประกวดบทความวิจัยดีเด่น</a></li>
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การแข่งขันแผนธุรกิจสตาร์ทอัพ</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มการประกวด</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">งานวิจัยที่ตีพิมพ์</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">งานวิจัย & วารสารวิชาการ SCT</a></li>
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-secondary text-decoration-none">SCT Conference Proceedings</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย</a></li>
+                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">เป้าหมายความยั่งยืน SDGs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">ข่าวสารและการติดต่อ</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="index.html#news" class="text-secondary text-decoration-none">ข่าวสารและประกาศสถาบัน</a></li>
+                                    <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">ติดต่อเรา & แผนที่เดินทาง</a></li>
+                                    <li class="mb-2"><a href="javascript:void(0)" onclick="alert('ระบบคุ้มครองข้อมูลส่วนบุคคลตาม พ.ร.บ. PDPA พ.ศ. 2562')" class="text-secondary text-decoration-none">นโยบายความเป็นส่วนตัว (PDPA)</a></li>
+                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank" class="text-secondary text-decoration-none">เกี่ยวกับวิทยาลัยเทคโนโลยีภาคใต้</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Application Logic (Drawer, Search, Events) -->
+    <script src="js/app.js"></script>
+
+    <!-- Contact Form Handler -->
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('contact-success-alert');
+            if (alertBox) {
+                alertBox.classList.remove('d-none');
+            }
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.reset();
+            }
+        }
+    </script>
+</body>
+</html>

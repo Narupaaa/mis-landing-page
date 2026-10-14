@@ -1,0 +1,15 @@
+{
+  "short_name": "MIS SCT",
+  "name": "ระบบสารสนเทศ วิทยาลัยเทคโนโลยีภาคใต้ (MIS)",
+  "icons": [
+    {
+      "src": "https://mis.sct.ac.th/doc/img/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#182B49",
+  "theme_color": "#182B49",
+  "display": "standalone"
+}

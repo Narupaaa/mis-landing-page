@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern College of Technology (SCT) | รายการประกวด ข่าวสาร และงานวิจัยที่ตีพิมพ์</title>
+    <meta name="description" content="วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.) ศูนย์รวมข้อมูลรายการประกวด ข่าวสารกิจกรรม และคลังผลงานวิจัยที่ตีพิมพ์ระดับชาติและนานาชาติ">
+    <link rel="icon" href="images/sct_cambridge_logo.svg" type="image/svg+xml">
+
+    <!-- Fonts: TH Sarabun New / Sarabun (Active) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- macOS Font (เปิดใช้งานให้ลบคอมเมนต์ออก):
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    -->
+
+    <!-- Bootstrap 5 & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Cambridge Fresh CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-fresh">
+    <a href="#main-content" class="visually-hidden focusable">ข้ามไปยังเนื้อหาหลัก</a>
+
+    <div id="page-wrapper">
+        <div id="page" class="bg-grey">
+
+            <!-- ========================================================
+                 HEADER: EXACT CAMBRIDGE FIXED-TOP & SIDENAV
+                 ======================================================== -->
+            <div id="header">
+                <div class="section clearfix">
+
+                    <!-- Main Navigation Section (White) -->
+                    <section class="fixed-top main-nav-section bg-white">
+                        <div class="container">
+                            <nav class="d-flex justify-content-between align-items-center flex-nowrap w-100 main-nav">
+                                <a class="item d-flex align-items-center" href="#">
+                                    <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" />
+                                </a>
+                                <div class="item text-dark nav-right-items d-flex align-items-center ms-auto">
+                                    <a href="javascript:void(0)" onclick="toggleSearch()" class="search-trigger-link text-decoration-none me-4">
+                                        <span class="icon icon-search"><span class="sr-only with-contrast">Search</span></span>
+                                    </a>
+                                    <button class="bg-white border-0 p-0" onclick="openNavR()" aria-label="Open navigation menu">
+                                        <span class="icon icon-menu"><span class="sr-only with-contrast"> Menu</span></span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <!-- Expandable Search Bar -->
+                        <div id="search-bar-dropdown" class="search-dropdown-wrap bg-light border-bottom d-none py-3">
+                            <div class="container">
+                                <div class="input-group">
+                                    <input type="text" id="site-search-input" class="form-control" placeholder="ค้นหารายการประกวด, ข่าวสาร, หรือชื่องานวิจัย...">
+                                    <button class="btn btn-primary text-dark fw-bold" type="button" onclick="handleSearch()">ค้นหา</button>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="toggleSearch()">ปิด</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Exact Cambridge Sidenav Container -->
+                    <section class="fixed-top sidenav-container-section pointer-events-none">
+                        <div class="container pr-0 pl-0">
+                            <div class="relativepos">
+                                <div class="sidenavR pointer-events-auto" id="mySidenavR">
+                                    <button class="closebtn bg-primary" onclick="closeNavR()" aria-label="Close navigation menu">
+                                        <span class="icon icon-close p-3"></span>
+                                        <span class="sr-only"> Close</span>
+                                    </button>
+                                    <div class="pt-4">
+                                        <div>
+                                            <nav role="navigation" aria-labelledby="block-fresh-homepageslider-menu" id="block-fresh-homepageslider">
+                                                <h2 class="visually-hidden" id="block-fresh-homepageslider-menu">Homepage - slider</h2>
+                                                <ul>
+                                                    <li><a href="competitions.html">รายการประกวดและแข่งขัน</a></li>
+                                                    <li><a href="research.html">งานวิจัย & วารสารวิชาการ</a></li>
+                                                    <li><a href="#news" onclick="closeNavR()">ข่าวสารและประกาศสถาบัน</a></li>
+                                                    <li><a href="download.html">ดาวน์โหลดเอกสารแบบฟอร์ม</a></li>
+                                                    <li><a href="contact.html" onclick="closeNavR()">ติดต่อเรา</a></li>
+                                                </ul>
+                                            </nav>
+
+                                            <!-- Sidenav Font Resizer Controls -->
+                                            <div class="sidenav-font-resizer px-4 pt-3 mt-3 border-top border-dark-subtle">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span class="small font-weight-bold text-dark">ขนาดตัวอักษร:</span>
+                                                    <div class="font-resizer-wrap d-flex align-items-center" role="group" aria-label="ปรับขนาดตัวอักษร">
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('small')" title="ลดขนาดตัวอักษร" aria-label="ลดขนาดตัวอักษร">A-</button>
+                                                        <button type="button" class="btn-font-resize active" onclick="setFontSize('normal')" title="ขนาดตัวอักษรปกติ" aria-label="ขนาดตัวอักษรปกติ">A</button>
+                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('large')" title="เพิ่มขนาดตัวอักษร" aria-label="เพิ่มขนาดตัวอักษร">A+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="sidenavOverlay" class="drawer-backdrop" onclick="closeNavR()"></div>
+
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 MAIN WRAPPER & SECTIONS (CAMBRIDGE TEMPLATE)
+                 ======================================================== -->
+            <div id="main-wrapper">
+                <div id="main" class="clearfix">
+                    <div id="content" class="column">
+                        <div class="section">
+                            <div id="main-content"></div>
+
+                            <!-- 1. CAMBRIDGE HERO SECTION -->
+                            <section class="my-hero-section">
+                                <div class="container">
+                                    <div class="row content">
+                                        <div class="col-12 p-0">
+                                            <div class="hero-container position-relative">
+                                                <div class="field-name-field-para-hero-image">
+                                                    <div class="field-items">
+                                                        <div class="field-item even">
+                                                            <img loading="eager"
+                                                                 src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80"
+                                                                 width="1280" height="666"
+                                                                 alt="Campus at SCT"
+                                                                 class="img-fluid hero-banner-img" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Authentic Cambridge Panel Overlaid on Hero -->
+                                                <div class="homepage-hero-panel">
+                                                    <div class="hero-title-box bg-white p-4 p-md-1">
+                                                        <h1 class="headline font-weight-bold text-dark m-0">
+                                                            Welcome to<br>SCT
+                                                        </h1>
+                                                    </div>
+                                                    <div class="hero-teaser-box bg-black text-white p-3 p-md-4 mt-3">
+                                                        <p class="mb-2 text-white small font-weight-bold">
+                                                            ศูนย์กลางการประกวดผลงาน ข่าวสารกิจกรรม และคลังผลงานวิจัยที่ตีพิมพ์
+                                                        </p>
+                                                        <p class="mb-0 small">
+                                                            <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-primary text-decoration-none font-weight-bold">เปิดรับบทความวิจัยการประชุมวิชาการระดับชาติ ครั้งที่ 17 ดูรายละเอียดและส่งผลงาน...</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+                            <!-- 4. CAMBRIDGE LINKBOXES (6 Photographic Cards) -->
+                            <section class="linkbox-section py-4">
+                                <div class="container">
+                                    <div class="row g-0 linkbox-grid">
+
+                                        <!-- Linkbox 1 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="research.html" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="คลังวารสารและงานวิจัย" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">คลังวารสาร & งานวิจัยที่ตีพิมพ์</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Linkbox 2 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="competitions.html" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="การประกวดโครงงานและนวัตกรรม" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">การประกวดโครงงาน & นวัตกรรม</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+                                        <!-- Linkbox 4 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="research.html" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="งานวิจัยด้านความยั่งยืน SDGs" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">งานวิจัยเพื่อความยั่งยืน (SDGs)</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Linkbox 5 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="#news" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="ข่าวสารและกิจกรรมวิทยาลัย" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">ข่าวสารและกิจกรรมวิทยาลัย</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Linkbox 6 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="download.html" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">ดาวน์โหลดแบบฟอร์มเอกสารวิจัย</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <!-- Linkbox 3 -->
+                                        <div class="col-md-6 col-lg-4 linkbox-item text-center">
+                                            <a href="contact.html" class="text-decoration-none">
+                                                <div class="relativepos m-0 linkbox-wrap">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&h=450&q=80" width="390" height="300" alt="การประชุมวิชาการ SCT ครั้งที่ 17" class="img-fluid linkbox-img" />
+                                                    <div class="linkbox-caption-container">
+                                                        <div class="linkbox-caption-btn">ติดต่อเรา</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- 5. CAMBRIDGE NEWS SECTION -->
+                            <section class="news-section-head pt-5" id="news">
+                                <div class="container">
+                                    <div class="row margin-adjust">
+                                        <div class="col px-0">
+                                            <h2 class="mb-2"><span class="d-inline-block display-5 text-dark font-weight-bold">News & Announcements</span></h2>
+                                            <p class="lead text-dark">ข่าวสาร กิจกรรม และประกาศสำคัญจากวิทยาลัยเทคโนโลยีภาคใต้</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="news-section pb-4">
+                                <div class="container">
+                                    <div class="row margin-adjust g-4">
+
+                                        <!-- News 1 -->
+                                        <div class="col-lg-4 article">
+                                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                                <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-decoration-none">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&h=330&q=80" class="img-fluid mb-3 w-100" alt="News 1">
+                                                    <h3 class="h5 text-dark font-weight-bold">เปิดรับบทความวิจัย การประชุมวิชาการระดับชาติ ครั้งที่ 17</h3>
+                                                </a>
+                                                <div class="news-summary text-muted ">
+                                                    เชิญชวนคณาจารย์ นักวิจัย และนักศึกษาส่งบทความวิจัยเพื่อนำเสนอในงาน SCT Conference 17th ประจำปีการศึกษา 2569 ร่วมขับเคลื่อนเป้าหมายการพัฒนาที่ยั่งยืน (SDGs)
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- News 2 -->
+                                        <div class="col-lg-4 article">
+                                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                                <a href="#competitions" class="text-decoration-none">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&h=330&q=80" class="img-fluid mb-3 w-100" alt="News 2">
+                                                    <h3 class="h5 text-dark font-weight-bold">ประกาศผลรางวัลการประกวดนวัตกรรมและสิ่งประดิษฐ์นักศึกษา</h3>
+                                                </a>
+                                                <div class="news-summary text-muted ">
+                                                    ขอแสดงความยินดีกับทีมนักศึกษาคณะเทคโนโลยีสารสนเทศ ที่ได้รับรางวัลชนะเลิศอันดับ 1 ในการประกวดโครงงานเทคโนโลยีและแอปพลิเคชันเพื่อชุมชน
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- News 3 -->
+                                        <div class="col-lg-4 article">
+                                            <div class="wrapper mb-4 mb-lg-0 h-100">
+                                                <a href="https://www.sct.ac.th" target="_blank" class="text-decoration-none">
+                                                    <img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&h=330&q=80" class="img-fluid mb-3 w-100" alt="News 3">
+                                                    <h3 class="h5 text-dark font-weight-bold">วารสารวิชาการ SCT ผ่านการรับรองมาตรฐาน TCI กลุ่มที่ 1</h3>
+                                                </a>
+                                                <div class="news-summary text-muted ">
+                                                    ศูนย์ดัชนีการอ้างอิงวารสารไทย (TCI) ประกาศผลการประเมินคุณภาพวารสารวิชาการ โดยวารสารวิชาการเทคโนโลยีภาคใต้ได้รับการรับรองคุณภาพอย่างต่อเนื่อง
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="news-events-more-section pb-4">
+                                <div class="container">
+                                    <div class="d-flex justify-content-end">
+                                        <a href="https://www.sct.ac.th" target="_blank" class="font-weight-bold text-dark text-decoration-none">อ่านข่าวสารทั้งหมดเพิ่มเติม →</a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- 6. CAMBRIDGE SOCIAL HIGHLIGHTS & FOLLOW US -->
+                            <section class="social-section py-5">
+                                <div class="container">
+                                    <!-- 2-Card Social Highlights -->
+                                    <div class="row g-4 mb-5">
+                                        <!-- YouTube Card -->
+                                        <div class="col-md-6">
+                                            <div class="social-card h-100">
+                                                <a href="https://www.youtube.com/@SCTChannel" target="_blank" class="text-decoration-none text-dark d-block">
+                                                    <div class="social-media-wrap position-relative overflow-hidden mb-3">
+                                                        <img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&h=420&q=80" class="img-fluid w-100" alt="SCT Highlights Video">
+                                                        <div class="video-play-btn">
+                                                            <i class="bi bi-play-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-start gap-3">
+                                                        <p class="mb-0 text-dark">
+                                                            รับชมบรรยากาศการเรียนรู้ กิจกรรมนักศึกษา และงานวิจัยนวัตกรรมของวิทยาลัยเทคโนโลยีภาคใต้ (SCT) ผ่านช่องทาง YouTube
+                                                        </p>
+                                                        <span class="fs-4 text-dark flex-shrink-0"><i class="bi bi-youtube"></i></span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Instagram Card -->
+                                        <div class="col-md-6">
+                                            <div class="social-card h-100">
+                                                <a href="https://www.instagram.com" target="_blank" class="text-decoration-none text-dark d-block">
+                                                    <div class="social-media-wrap position-relative overflow-hidden mb-3">
+                                                        <img loading="lazy" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&h=420&q=80" class="img-fluid w-100" alt="SCT Instagram Feed">
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-start gap-3">
+                                                        <p class="mb-0 text-dark">
+                                                            ติดตามภาพความประทับใจในรั้วสถาบัน ผลงานสร้างสรรค์ของนักศึกษา และไลฟ์สไตล์ชาว SCT ได้ทาง Instagram
+                                                        </p>
+                                                        <span class="fs-4 text-dark flex-shrink-0"><i class="bi bi-instagram"></i></span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Follow Us Header & Icons -->
+                                    <div class="follow-us-wrap pt-2">
+                                        <h2 class="h3 font-weight-bold text-dark mb-3">Follow us</h2>
+                                        <div class="d-flex flex-wrap align-items-center gap-3 social-icons-list">
+                                            <a href="https://www.facebook.com/sct.ac.th" target="_blank" class="social-icon-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                            <a href="https://www.instagram.com" target="_blank" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                            <a href="https://www.linkedin.com" target="_blank" class="social-icon-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                            <a href="https://www.tiktok.com" target="_blank" class="social-icon-link" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                                            <a href="https://twitter.com" target="_blank" class="social-icon-link" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                                            <a href="https://www.youtube.com/@SCTChannel" target="_blank" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================================
+                 GLOBAL FOOTER: CAMBRIDGE 4-COLUMN DESIGN
+                 ======================================================== -->
+            <div id="global-footer">
+                <div class="section container py-5">
+                    <div class="region region-global-footer row g-4">
+
+                        <div class="col-md-6 col-lg-3">
+                            <a class="item d-flex align-items-center gap-2 text-decoration-none text-white mb-3" href="#">
+                                <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" style="filter: brightness(0) invert(1);" />
+                            </a>
+                            <div class="content text-secondary small">
+                                <p>&copy; 2026 วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)</p>
+                                <p class="mb-2">124 ม.7 ถ.ทุ่งสง-ห้วยยอด ต.ที่วัง อ.ทุ่งสง จ.นครศรีธรรมราช 80110</p>
+                                <p class="mb-0">โทรศัพท์: 0-7577-0136-7<br>อีเมล: research-support@sct.ac.th</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">รายการประกวด & แข่งขัน</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การประกวดโครงงานนวัตกรรม</a></li>
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/index.php?c=participation&season=17#presenters" target="_blank" class="text-secondary text-decoration-none">ประกวดบทความวิจัยดีเด่น</a></li>
+                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การแข่งขันแผนธุรกิจสตาร์ทอัพ</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มการประกวด</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">งานวิจัยที่ตีพิมพ์</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-secondary text-decoration-none">คลังบทความวิจัย Proceedings</a></li>
+                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank" class="text-secondary text-decoration-none">วารสารวิชาการ SCT Journal (TCI 1)</a></li>
+                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย</a></li>
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/index.php?c=regis&season=17" target="_blank" class="text-secondary text-decoration-none">ตรวจสอบรายชื่อผู้นำเสนอผลงาน</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="content">
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">ข่าวสารและการติดต่อ</h3>
+                                <ul class="list-unstyled menu text-secondary small">
+                                    <li class="mb-2"><a href="#news" class="text-secondary text-decoration-none">ข่าวสารและประกาศสถาบัน</a></li>
+                                    <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">ติดต่อเรา & แผนที่เดินทาง</a></li>
+                                    <li class="mb-2"><a href="javascript:void(0)" onclick="alert('ระบบคุ้มครองข้อมูลส่วนบุคคลตาม พ.ร.บ. PDPA พ.ศ. 2562')" class="text-secondary text-decoration-none">นโยบายความเป็นส่วนตัว (PDPA)</a></li>
+                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank" class="text-secondary text-decoration-none">เกี่ยวกับวิทยาลัยเทคโนโลยีภาคใต้</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Application Logic (Drawer, Search, Events) -->
+    <script src="js/app.js"></script>
+</body>
+</html>

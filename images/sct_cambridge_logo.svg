@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 70" width="460" height="70">
+  <!-- Crest / Shield -->
+  <g transform="translate(10, 8)">
+    <!-- Outer Shield -->
+    <path d="M0,4 C0,0 2,0 6,0 L36,0 C40,0 42,0 42,4 L42,28 C42,42 21,52 21,52 C21,52 0,42 0,28 Z" fill="#182B49" stroke="#6bbbae" stroke-width="2"/>
+    <!-- Inner Cross / Academic emblem -->
+    <path d="M21,6 L21,46 M6,22 L36,22" stroke="#6bbbae" stroke-width="2.5"/>
+    <circle cx="21" cy="22" r="5" fill="#e5007d"/>
+    <polygon points="21,10 24,17 31,17 25,21 27,28 21,24 15,28 17,21 11,17 18,17" fill="#ffffff" transform="scale(0.5) translate(21, 22)"/>
+  </g>
+
+  <!-- Typography: Cambridge Style Small-Caps Serif / Bold -->
+  <text x="68" y="28" font-family="'Open Sans', 'Georgia', serif" font-size="19" font-weight="800" fill="#000000" letter-spacing="1.2">SOUTHERN COLLEGE OF</text>
+  <text x="68" y="49" font-family="'Open Sans', 'Georgia', serif" font-size="19" font-weight="800" fill="#000000" letter-spacing="1.8">TECHNOLOGY</text>
+  <text x="68" y="62" font-family="'Anuphan', sans-serif" font-size="10.5" font-weight="500" fill="#64748B">วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)</text>
+</svg>

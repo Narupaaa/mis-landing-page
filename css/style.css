@@ -1,0 +1,669 @@
+/* ==========================================================================
+   AUTHENTIC CAMBRIDGE FRESH THEME
+   Direct clone of https://www.cam.ac.uk/ Header, Sidebar, and Style System
+   ========================================================================== */
+
+html {
+    font-size: 17.5px;
+    transition: font-size 0.2s ease;
+}
+
+html.font-size-small {
+    font-size: 15px;
+}
+
+html.font-size-normal {
+    font-size: 17.5px;
+}
+
+html.font-size-large {
+    font-size: 21px;
+}
+
+:root {
+    --cam-primary: #6bbbae;          /* Official Cambridge Teal */
+    --cam-primary-hover: #4ca495;
+    --cam-secondary: #e5007d;        /* Official Cambridge Magenta */
+    --cam-secondary-hover: #b80064;
+    --cam-tertiary: #d3eae6;         /* Light Teal */
+    --cam-quaternary: #f7c0de;       /* Light Pink */
+    --cam-dark: #202020;             /* Cambridge Dark Charcoal */
+    --cam-black: #000000;
+    --cam-grey: #f8f9fa;
+    --cam-border: #e2e8f0;
+    /* ฟอนต์หลัก: TH Sarabun New / Sarabun */
+    --font-main: 'TH Sarabun New', 'TH Sarabun PSK', 'Sarabun', sans-serif;
+    /* ฟอนต์ macOS (เปิดใช้งานให้สลับมาใช้บรรทัดนี้):
+    --font-main: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Sukhumvit Set', 'Thonburi', 'Anuphan', sans-serif;
+    */
+}
+
+body.theme-fresh {
+    font-family: var(--font-main);
+    color: var(--cam-dark);
+    background-color: var(--cam-grey);
+    padding-top: 62px;
+    margin: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background Utility Classes matching Cambridge */
+.bg-primary { background-color: var(--cam-primary) !important; }
+.bg-secondary { background-color: var(--cam-secondary) !important; }
+.bg-tertiary { background-color: var(--cam-tertiary) !important; }
+.bg-quaternary { background-color: var(--cam-quaternary) !important; }
+.bg-dark { background-color: var(--cam-dark) !important; }
+.bg-grey { background-color: var(--cam-grey) !important; }
+.bg-black { background-color: var(--cam-black) !important; }
+
+.text-primary { color: var(--cam-primary) !important; }
+.text-secondary { color: var(--cam-secondary) !important; }
+
+/* --------------------------------------------------
+   1. CAMBRIDGE FIXED-TOP HEADER
+   -------------------------------------------------- */
+.main-nav-section {
+    min-height: 62px;
+    z-index: 1030;
+}
+
+.main-nav {
+    background-color: #fff;
+    min-height: 62px;
+    padding: 0 16px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+.main-nav .item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.main-nav .nav-right-items {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0;
+}
+
+.sidenav-font-resizer {
+    border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.font-resizer-wrap {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 2px;
+    gap: 3px;
+}
+
+.btn-font-resize {
+    border: none;
+    background: transparent;
+    color: #202020;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.2;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-font-resize:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-font-resize.active {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.main-nav .cam-logo {
+    height: 46px;
+    max-width: 320px;
+    width: auto;
+    margin: 0 !important;
+    flex-shrink: 0;
+}
+
+.main-nav button {
+    padding-right: 0;
+    padding-left: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.main-nav .icon {
+    display: inline-flex;
+    align-items: center;
+    color: #000;
+}
+
+.main-nav .icon-search::before {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    font-size: 1.25rem;
+    margin-right: 6px;
+    color: #000;
+}
+
+.main-nav .icon-menu::before {
+    content: "\F479";
+    font-family: "bootstrap-icons";
+    font-size: 1.45rem;
+    margin-right: 6px;
+    color: #000;
+}
+
+.main-nav .icon-close::before {
+    content: "\F62A";
+    font-family: "bootstrap-icons";
+    font-size: 1.75rem;
+    color: #000;
+}
+
+.main-nav .with-contrast {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+}
+
+.search-dropdown-wrap {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------
+   2. CAMBRIDGE AUTHENTIC SIDENAV (sidenavR in #6bbbae)
+   -------------------------------------------------- */
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+.sidenav-container-section {
+    min-height: 62px;
+    z-index: 10000;
+}
+
+.relativepos {
+    position: relative;
+}
+
+.sidenavR {
+    background-color: var(--cam-primary);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 50px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 0;
+    max-width: 85vw;
+    z-index: 10001;
+    display: none;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.sidenavR ul {
+    padding-inline-start: 24px;
+    padding-inline-end: 20px;
+    margin-top: 10px;
+}
+
+.sidenavR ul li {
+    list-style: none;
+    padding: 0.3rem 0;
+}
+
+.sidenavR a {
+    color: #000;
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    line-height: 1.45;
+}
+
+.sidenavR a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+.sidenavR .closebtn {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sidenavR .closebtn .sr-only {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .sidenavR a {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidenavR ul {
+        padding-inline-start: 28px;
+    }
+}
+
+/* --------------------------------------------------
+   3. HERO SECTION (Real Cambridge Photo + Floating Panel)
+   -------------------------------------------------- */
+.my-hero-section {
+    /*background-color: var(--cam-dark);*/
+    padding: 0;
+}
+
+.hero-container {
+    max-height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-banner-img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.95);
+    display: block;
+}
+
+.homepage-hero-panel {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    max-width: 480px;
+    width: 90%;
+    z-index: 10;
+}
+
+.hero-title-box {
+    background-color: #ffffff;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.hero-title-box .headline {
+    font-size: 4.6rem;
+    font-weight: 1000;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: #000000;
+}
+
+.hero-teaser-box {
+    background-color: #000000;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.hero-teaser-box a.text-primary {
+    color: var(--cam-primary) !important;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.hero-teaser-box a.text-primary:hover {
+    color: var(--cam-primary-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* --------------------------------------------------
+   4. SPLIT DROPDOWN SECTION (Row Controls)
+   -------------------------------------------------- */
+.grad-postgrad-dropdown-section .controls button {
+    font-size: 1.05rem;
+    border-radius: 0;
+    transition: opacity 0.2s;
+}
+
+.grad-postgrad-dropdown-section .controls button:hover {
+    opacity: 0.92;
+}
+
+/* --------------------------------------------------
+   5. SIGNPOST SECTION (Side-by-side Highlights)
+   -------------------------------------------------- */
+.signpost {
+    border-radius: 0;
+}
+
+.btn-tertiary {
+    background-color: var(--cam-tertiary);
+    border: none;
+}
+
+.btn-tertiary:hover {
+    background-color: #b8ded7;
+}
+
+.btn-quaternary {
+    background-color: var(--cam-quaternary);
+    border: none;
+}
+
+.btn-quaternary:hover {
+    background-color: #f0a3cc;
+}
+
+/* --------------------------------------------------
+   6. CAMBRIDGE LINKBOXES (6 Photographic Cards)
+   -------------------------------------------------- */
+.linkbox-grid .linkbox-item {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.linkbox-wrap {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cam-dark);
+    margin: 0;
+    border-radius: 0;
+}
+
+.linkbox-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.linkbox-wrap:hover .linkbox-img {
+    transform: scale(1.05);
+    filter: brightness(0.92);
+}
+
+.linkbox-caption-container {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.linkbox-caption-btn {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 10px 18px;
+    text-align: center;
+    display: inline-block;
+    width: 86%;
+    max-width: 290px;
+    border-radius: 0;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.2px;
+}
+
+/* First card Cambridge Teal accent matching cam.ac.uk */
+.linkbox-item:first-child .linkbox-caption-btn {
+    background-color: var(--cam-primary);
+    color: #000000;
+}
+
+.linkbox-wrap:hover .linkbox-caption-btn {
+    background-color: var(--cam-primary);
+    color: #000000;
+}
+
+.linkbox-item:first-child .linkbox-wrap:hover .linkbox-caption-btn {
+    background-color: var(--cam-primary-hover);
+    color: #000000;
+}
+
+@media (max-width: 767.98px) {
+    .linkbox-img {
+        height: 250px;
+    }
+    .linkbox-caption-btn {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+        width: 90%;
+    }
+}
+
+/* --------------------------------------------------
+   7. NEWS & EVENTS ARTICLES
+   -------------------------------------------------- */
+.article .wrapper {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    transition: transform 0.2s;
+}
+
+.article a {
+    color: inherit;
+    display: block;
+}
+
+.article a img {
+    transition: opacity 0.25s ease;
+}
+
+.article a:hover img {
+    opacity: 0.92;
+}
+
+.article a h3 {
+    transition: color 0.2s ease;
+    text-underline-offset: 4px;
+}
+
+.article a:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--cam-secondary);
+}
+
+.news-summary {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* --------------------------------------------------
+   8. SOCIAL HIGHLIGHTS & FOLLOW US
+   -------------------------------------------------- */
+.social-media-wrap img {
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.social-card:hover .social-media-wrap img {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    color: #ffffff;
+    width: 68px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-card:hover .video-play-btn {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #cc0000;
+}
+
+.social-icons-list .social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #202020;
+    font-size: 1.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons-list .social-icon-link:hover {
+    color: var(--cam-primary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+    .social-media-wrap img {
+        height: 240px;
+    }
+}
+
+/* --------------------------------------------------
+   9. GLOBAL FOOTER (4-Column Dark Design)
+   -------------------------------------------------- */
+#global-footer {
+    background-color: #1a1a1a;
+    border-top: 4px solid var(--cam-primary);
+}
+
+#global-footer a {
+    transition: color 0.2s;
+}
+
+#global-footer a:hover {
+    color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .homepage-hero-panel {
+        position: static;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .hero-title-box .headline {
+        font-size: 2.2rem;
+    }
+
+    .hero-banner-img {
+        height: 340px;
+    }
+
+    .grad-postgrad-dropdown-section .controls button {
+        font-size: 0.9rem;
+        padding: 12px 14px !important;
+    }
+
+    .main-nav .cam-logo {
+        height: 38px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-nav .cam-logo {
+        height: 30px;
+        max-width: 180px;
+    }
+    .main-nav .nav-right-items a.search-trigger-link {
+        margin-right: 12px !important;
+    }
+    .main-nav .with-contrast {
+        font-size: 0.85rem;
+    }
+}
+
+/* --------------------------------------------------
+   10. DOWNLOAD PAGE STYLES
+   -------------------------------------------------- */
+.download-page-header {
+    border-left: 5px solid var(--cam-primary) !important;
+}
+
+.doc-box {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    border: 1px solid #e9ecef !important;
+}
+
+.doc-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--cam-primary) !important;
+}
+
+.doc-file-icon {
+    line-height: 1;
+}
+
+#category-filter-buttons .filter-btn {
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
