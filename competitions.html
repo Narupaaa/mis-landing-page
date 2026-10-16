@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="th" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>รายการประกวดและแข่งขัน | Southern College of Technology (SCT)</title>
-    <meta name="description" content="ศูนย์รวมรายการประกวดโครงงานนวัตกรรม สิ่งประดิษฐ์ การแข่งขันแผนธุรกิจ และเวทีวิชาการระดับชาติ วิทยาลัยเทคโนโลยีภาคใต้">
+    <meta name="description"
+        content="ศูนย์รวมรายการประกวดโครงงานนวัตกรรม สิ่งประดิษฐ์ การแข่งขันแผนธุรกิจ และเวทีวิชาการระดับชาติ วิทยาลัยเทคโนโลยีภาคใต้">
     <link rel="icon" href="images/sct_cambridge_logo.svg" type="image/svg+xml">
 
     <!-- Fonts: TH Sarabun New / Sarabun (Active) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
     <!-- macOS Font (เปิดใช้งานให้ลบคอมเมนต์ออก):
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -41,14 +45,19 @@
                         <div class="container">
                             <nav class="d-flex justify-content-between align-items-center flex-nowrap w-100 main-nav">
                                 <a class="item d-flex align-items-center" href="index.html">
-                                    <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" />
+                                    <img class="cam-logo" alt="Southern College of Technology"
+                                        src="images/sct_cambridge_logo.svg" />
                                 </a>
                                 <div class="item text-dark nav-right-items d-flex align-items-center ms-auto">
-                                    <a href="javascript:void(0)" onclick="toggleSearch()" class="search-trigger-link text-decoration-none me-4">
-                                        <span class="icon icon-search"><span class="sr-only with-contrast">Search</span></span>
+                                    <a href="javascript:void(0)" onclick="toggleSearch()"
+                                        class="search-trigger-link text-decoration-none me-4">
+                                        <span class="icon icon-search"><span
+                                                class="sr-only with-contrast">Search</span></span>
                                     </a>
-                                    <button class="bg-white border-0 p-0" onclick="openNavR()" aria-label="Open navigation menu">
-                                        <span class="icon icon-menu"><span class="sr-only with-contrast"> Menu</span></span>
+                                    <button class="bg-white border-0 p-0" onclick="openNavR()"
+                                        aria-label="Open navigation menu">
+                                        <span class="icon icon-menu"><span class="sr-only with-contrast">
+                                                Menu</span></span>
                                     </button>
                                 </div>
                             </nav>
@@ -58,9 +67,12 @@
                         <div id="search-bar-dropdown" class="search-dropdown-wrap bg-light border-bottom d-none py-3">
                             <div class="container">
                                 <div class="input-group">
-                                    <input type="text" id="site-search-input" class="form-control" placeholder="ค้นหารายการประกวด, ข่าวสาร, หรือชื่องานวิจัย...">
-                                    <button class="btn btn-primary text-dark fw-bold" type="button" onclick="handleSearch()">ค้นหา</button>
-                                    <button class="btn btn-outline-secondary" type="button" onclick="toggleSearch()">ปิด</button>
+                                    <input type="text" id="site-search-input" class="form-control"
+                                        placeholder="ค้นหารายการประกวด, ข่าวสาร, หรือชื่องานวิจัย...">
+                                    <button class="btn btn-primary text-dark fw-bold" type="button"
+                                        onclick="handleSearch()">ค้นหา</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="toggleSearch()">ปิด</button>
                                 </div>
                             </div>
                         </div>
@@ -71,33 +83,53 @@
                         <div class="container pr-0 pl-0">
                             <div class="relativepos">
                                 <div class="sidenavR pointer-events-auto" id="mySidenavR">
-                                    <button class="closebtn bg-primary" onclick="closeNavR()" aria-label="Close navigation menu">
+                                    <button class="closebtn bg-primary" onclick="closeNavR()"
+                                        aria-label="Close navigation menu">
                                         <span class="icon icon-close p-3"></span>
                                         <span class="sr-only"> Close</span>
                                     </button>
                                     <div class="pt-4">
                                         <div>
-                                            <nav role="navigation" aria-labelledby="block-fresh-homepageslider-menu" id="block-fresh-homepageslider">
-                                                <h2 class="visually-hidden" id="block-fresh-homepageslider-menu">Homepage - slider</h2>
+                                            <nav role="navigation" aria-labelledby="block-fresh-homepageslider-menu"
+                                                id="block-fresh-homepageslider">
+                                                <h2 class="visually-hidden" id="block-fresh-homepageslider-menu">
+                                                    Homepage - slider</h2>
                                                 <ul>
-                                                    <li><a href="competitions.html" onclick="closeNavR()" class="text-primary font-weight-bold">รายการประกวดและแข่งขัน</a></li>
-                                                    <li><a href="research.html" onclick="closeNavR()">งานวิจัย & วารสารวิชาการ</a></li>
-                                                    <li><a href="index.html#news" onclick="closeNavR()">ข่าวสารและประกาศสถาบัน</a></li>
-                                                    <li><a href="download.html" onclick="closeNavR()">ดาวน์โหลดเอกสารแบบฟอร์ม</a></li>
+                                                    <li><a href="competitions.html" onclick="closeNavR()"
+                                                            class="text-primary font-weight-bold">รายการประกวดและแข่งขัน</a>
+                                                    </li>
+                                                    <li><a href="research.html" onclick="closeNavR()">งานวิจัย &
+                                                            วารสารวิชาการ</a></li>
+                                                    <li><a href="index.html#news"
+                                                            onclick="closeNavR()">ข่าวสารและประกาศสถาบัน</a></li>
+                                                    <li><a href="download.html"
+                                                            onclick="closeNavR()">ดาวน์โหลดเอกสารแบบฟอร์ม</a></li>
                                                     <li><a href="contact.html" onclick="closeNavR()">ติดต่อเรา</a></li>
-                                                    <li><a href="https://www.sct.ac.th" target="_blank">เว็บไซต์หลักวิทยาลัย SCT <i class="bi bi-arrow-up-right small"></i></a></li>
-                                                    <li><a href="index.html#global-footer" onclick="closeNavR()">เกี่ยวกับวิทยาลัยและข้อมูลติดต่อ</a></li>
+                                                    <li><a href="https://www.sct.ac.th"
+                                                            target="_blank">เว็บไซต์หลักวิทยาลัย SCT <i
+                                                                class="bi bi-arrow-up-right small"></i></a></li>
+                                                    <li><a href="index.html#global-footer"
+                                                            onclick="closeNavR()">เกี่ยวกับวิทยาลัยและข้อมูลติดต่อ</a>
+                                                    </li>
                                                 </ul>
                                             </nav>
 
                                             <!-- Sidenav Font Resizer Controls -->
-                                            <div class="sidenav-font-resizer px-4 pt-3 mt-3 border-top border-dark-subtle">
+                                            <div
+                                                class="sidenav-font-resizer px-4 pt-3 mt-3 border-top border-dark-subtle">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                     <span class="small font-weight-bold text-dark">ขนาดตัวอักษร:</span>
-                                                    <div class="font-resizer-wrap d-flex align-items-center" role="group" aria-label="ปรับขนาดตัวอักษร">
-                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('small')" title="ลดขนาดตัวอักษร" aria-label="ลดขนาดตัวอักษร">A-</button>
-                                                        <button type="button" class="btn-font-resize active" onclick="setFontSize('normal')" title="ขนาดตัวอักษรปกติ" aria-label="ขนาดตัวอักษรปกติ">A</button>
-                                                        <button type="button" class="btn-font-resize" onclick="setFontSize('large')" title="เพิ่มขนาดตัวอักษร" aria-label="เพิ่มขนาดตัวอักษร">A+</button>
+                                                    <div class="font-resizer-wrap d-flex align-items-center"
+                                                        role="group" aria-label="ปรับขนาดตัวอักษร">
+                                                        <button type="button" class="btn-font-resize"
+                                                            onclick="setFontSize('small')" title="ลดขนาดตัวอักษร"
+                                                            aria-label="ลดขนาดตัวอักษร">A-</button>
+                                                        <button type="button" class="btn-font-resize active"
+                                                            onclick="setFontSize('normal')" title="ขนาดตัวอักษรปกติ"
+                                                            aria-label="ขนาดตัวอักษรปกติ">A</button>
+                                                        <button type="button" class="btn-font-resize"
+                                                            onclick="setFontSize('large')" title="เพิ่มขนาดตัวอักษร"
+                                                            aria-label="เพิ่มขนาดตัวอักษร">A+</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,7 +153,8 @@
                     <!-- Breadcrumbs -->
                     <nav aria-label="breadcrumb" class="mb-3">
                         <ol class="breadcrumb bg-transparent p-0 small">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">หน้าหลัก</a></li>
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-decoration-none text-dark">หน้าหลัก</a></li>
                             <li class="breadcrumb-item active" aria-current="page">รายการประกวดและแข่งขัน</li>
                         </ol>
                     </nav>
@@ -134,10 +167,9 @@
                                     <div class="field-items">
                                         <div class="field-item even">
                                             <img loading="eager"
-                                                 src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80"
-                                                 width="1280" height="666"
-                                                 alt="รายการประกวดและแข่งขัน SCT"
-                                                 class="img-fluid hero-banner-img" />
+                                                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80"
+                                                width="1280" height="666" alt="รายการประกวดและแข่งขัน SCT"
+                                                class="img-fluid hero-banner-img" />
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +186,8 @@
                                     </div>
                                     <div class="hero-teaser-box bg-black text-white p-3 p-md-4">
                                         <p class="mb-0 text-white small">
-                                            ศูนย์รวมเวทีประลองไอเดียสร้างสรรค์ การประกวดโครงงานนวัตกรรม สิ่งประดิษฐ์ และการแข่งขันแผนธุรกิจสตาร์ทอัพ ชิงเงินรางวัลและเกียรติบัตรระดับประเทศ
+                                            ศูนย์รวมเวทีประลองไอเดียสร้างสรรค์ การประกวดโครงงานนวัตกรรม สิ่งประดิษฐ์
+                                            และการแข่งขันแผนธุรกิจสตาร์ทอัพ ชิงเงินรางวัลและเกียรติบัตรระดับประเทศ
                                         </p>
                                     </div>
                                 </div>
@@ -169,19 +202,27 @@
                             <div class="col-md-7 col-lg-8">
                                 <!-- Category Filter Buttons -->
                                 <div class="d-flex flex-wrap gap-2" id="comp-filter-buttons">
-                                    <button class="btn btn-sm btn-dark active filter-btn" onclick="filterComps('all', this)">ทั้งหมด</button>
-                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterComps('innovation', this)">นวัตกรรม & สิ่งประดิษฐ์</button>
-                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterComps('business', this)">แผนธุรกิจ & สตาร์ทอัพ</button>
-                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterComps('ai-software', this)">AI & ซอฟต์แวร์</button>
-                                    <button class="btn btn-sm btn-outline-secondary filter-btn" onclick="filterComps('academic', this)">งานวิจัยวิชาการ</button>
+                                    <button class="btn btn-sm btn-dark active filter-btn"
+                                        onclick="filterComps('all', this)">ทั้งหมด</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn"
+                                        onclick="filterComps('innovation', this)">นวัตกรรม & สิ่งประดิษฐ์</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn"
+                                        onclick="filterComps('business', this)">แผนธุรกิจ & สตาร์ทอัพ</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn"
+                                        onclick="filterComps('ai-software', this)">AI & ซอฟต์แวร์</button>
+                                    <button class="btn btn-sm btn-outline-secondary filter-btn"
+                                        onclick="filterComps('academic', this)">งานวิจัยวิชาการ</button>
                                 </div>
                             </div>
                             <div class="col-md-5 col-lg-4">
                                 <!-- Search Input -->
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
-                                    <input type="text" id="comp-search-input" class="form-control border-start-0" placeholder="ค้นหาการประกวด..." onkeyup="searchComps()">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="clearCompSearch()">ล้าง</button>
+                                    <span class="input-group-text bg-light border-end-0"><i
+                                            class="bi bi-search"></i></span>
+                                    <input type="text" id="comp-search-input" class="form-control border-start-0"
+                                        placeholder="ค้นหาการประกวด..." onkeyup="searchComps()">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="clearCompSearch()">ล้าง</button>
                                 </div>
                             </div>
                         </div>
@@ -194,133 +235,195 @@
                     <div class="row margin-adjust g-4" id="competitions-grid">
 
                         <!-- Item 1: SCT Innovation Awards -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation" data-title="การประกวดโครงงานนวัตกรรมและสิ่งประดิษฐ์ sct innovation awards 2026">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation"
+                            data-title="การประกวดโครงงานนวัตกรรมและสิ่งประดิษฐ์ sct innovation awards 2026">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
                                 <a href="download.html" class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="SCT Innovation Awards">
-                                        <span class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="SCT Innovation Awards">
+                                        <span
+                                            class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-trophy-fill me-1"></i> รางวัลรวม 50,000 บ.
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การประกวดโครงงานนวัตกรรมและสิ่งประดิษฐ์ SCT Innovation Awards 2026</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">การประกวดโครงงานนวัตกรรมและสิ่งประดิษฐ์
+                                        SCT Innovation Awards 2026</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    เปิดรับผลงานสิ่งประดิษฐ์และนวัตกรรมพร้อมใช้จากนักศึกษาทุกสถาบัน ชิงถ้วยเกียรติยศและเงินรางวัลรวมกว่า 50,000 บาท พร้อมโอกาสต่อยอดเชิงพาณิชย์
+                                    เปิดรับผลงานสิ่งประดิษฐ์และนวัตกรรมพร้อมใช้จากนักศึกษาทุกสถาบัน
+                                    ชิงถ้วยเกียรติยศและเงินรางวัลรวมกว่า 50,000 บาท พร้อมโอกาสต่อยอดเชิงพาณิชย์
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 28 ก.พ. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดใบสมัคร →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 28
+                                        ก.พ. 2570</span>
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJtSpKf68af82P5pYuZykFGOYjuo_MQAR8V9NrbRNL4B3gLw/viewform"
+                                        class="small font-weight-bold text-primary text-decoration-none">ลงทะเบียน
+                                        →</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Item 2: Social Enterprise Pitching -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="business" data-title="การแข่งขันแผนธุรกิจสตาร์ทอัพเพื่อสังคม sct social enterprise pitching startup 2026">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="business"
+                            data-title="การแข่งขันแผนธุรกิจสตาร์ทอัพเพื่อสังคม sct social enterprise pitching startup 2026">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
                                 <a href="download.html" class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Social Enterprise Pitching">
-                                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="Social Enterprise Pitching">
+                                        <span
+                                            class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-cash-stack me-1"></i> ทุนบ่มเพาะ 100,000 บ.
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันแผนธุรกิจสตาร์ทอัพเพื่อสังคม (SCT Social Pitching 2026)</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันแผนธุรกิจสตาร์ทอัพเพื่อสังคม
+                                        (SCT Social Pitching 2026)</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    เวทีประลองไอเดียแผนธุรกิจเพื่อความยั่งยืน (SDGs) เฟ้นหาผู้ประกอบการรุ่นใหม่ ร่วมรับคำแนะนำจาก Mentor ระดับประเทศและเงินทุนตั้งต้นธุรกิจ
+                                    เวทีประลองไอเดียแผนธุรกิจเพื่อความยั่งยืน (SDGs) เฟ้นหาผู้ประกอบการรุ่นใหม่
+                                    ร่วมรับคำแนะนำจาก Mentor ระดับประเทศและเงินทุนตั้งต้นธุรกิจ
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 15 มี.ค. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดใบสมัคร →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 15
+                                        มี.ค. 2570</span>
+                                    <a href="download.html"
+                                        class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดใบสมัคร
+                                        →</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Item 3: AI & IoT Hackathon -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="ai-software" data-title="การแข่งขันพัฒนาซอฟต์แวร์ ai iot hackathon เพื่อชุมชนภาคใต้">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="ai-software"
+                            data-title="การแข่งขันพัฒนาซอฟต์แวร์ ai iot hackathon เพื่อชุมชนภาคใต้">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
                                 <a href="download.html" class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="AI & IoT Hackathon">
-                                        <span class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="AI & IoT Hackathon">
+                                        <span
+                                            class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-cpu me-1"></i> Hackathon 36 ชม.
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันแฮกกาธอนพัฒนา AI & IoT เพื่อยกระดับชุมชนภาคใต้</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันแฮกกาธอนพัฒนา AI & IoT
+                                        เพื่อยกระดับชุมชนภาคใต้</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    ท้าทายทีมนักพัฒนาซอฟต์แวร์ในการออกแบบระบบอัจฉริยะ แก้โจทย์เกษตรกรรม การท่องเที่ยว และบริการสาธารณสุขในท้องถิ่นแบบเร่งด่วน
+                                    ท้าทายทีมนักพัฒนาซอฟต์แวร์ในการออกแบบระบบอัจฉริยะ แก้โจทย์เกษตรกรรม การท่องเที่ยว
+                                    และบริการสาธารณสุขในท้องถิ่นแบบเร่งด่วน
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 10 มี.ค. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดใบสมัคร →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 10
+                                        มี.ค. 2570</span>
+                                    <a href="download.html"
+                                        class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดใบสมัคร
+                                        →</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Item 4: Best Undergraduate Presentation -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="academic" data-title="การแข่งขันนำเสนอผลงานวิจัยระดับปริญญาตรีดีเด่น sct conference 17 best paper">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="academic"
+                            data-title="การแข่งขันนำเสนอผลงานวิจัยระดับปริญญาตรีดีเด่น sct conference 17 best paper">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
-                                <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-decoration-none">
+                                <a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank"
+                                    class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Best Paper Presentation">
-                                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="Best Paper Presentation">
+                                        <span
+                                            class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-award-fill me-1"></i> รางวัล Best Paper
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันนำเสนอผลงานวิจัยระดับปริญญาตรีดีเด่น ในงาน SCT Conference</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">
+                                        การแข่งขันนำเสนอผลงานวิจัยระดับปริญญาตรีดีเด่น ในงาน SCT Conference</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    เวทีนำเสนอโครงงานวิจัยปริญญานิพนธ์ (Senior Project) ของนักศึกษา เพื่อคัดเลือกผลงานวิชาการยอดเยี่ยมและตีพิมพ์ในรายงานสืบเนื่องระดับชาติ
+                                    เวทีนำเสนอโครงงานวิจัยปริญญานิพนธ์ (Senior Project) ของนักศึกษา
+                                    เพื่อคัดเลือกผลงานวิชาการยอดเยี่ยมและตีพิมพ์ในรายงานสืบเนื่องระดับชาติ
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 25 ม.ค. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลด Template →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 25
+                                        ม.ค. 2570</span>
+                                    <a href="download.html"
+                                        class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลด
+                                        Template →</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Item 5: Digital Media & Content Challenge -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation" data-title="การประกวดสื่อสร้างสรรค์และคอนเทนต์ดิจิทัลเพื่อการท่องเที่ยวเชิงนิเวศ short video tiktok">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation"
+                            data-title="การประกวดสื่อสร้างสรรค์และคอนเทนต์ดิจิทัลเพื่อการท่องเที่ยวเชิงนิเวศ short video tiktok">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
                                 <a href="download.html" class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="Digital Media Challenge">
-                                        <span class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="Digital Media Challenge">
+                                        <span
+                                            class="badge bg-primary text-dark position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-camera-video-fill me-1"></i> รางวัลรวม 30,000 บ.
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การประกวดสื่อสร้างสรรค์และวิดีโอสั้นเพื่อส่งเสริมการท่องเที่ยวเชิงนิเวศ</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">
+                                        การประกวดสื่อสร้างสรรค์และวิดีโอสั้นเพื่อส่งเสริมการท่องเที่ยวเชิงนิเวศ</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    สร้างสรรค์วิดีโอสั้น (Short Video / TikTok / Reels) เล่าเรื่องราวอัตลักษณ์ชุมชนและธรรมชาติภาคใต้ เพื่อชิงรางวัล Popular Vote และรางวัลคณะกรรมการ
+                                    สร้างสรรค์วิดีโอสั้น (Short Video / TikTok / Reels)
+                                    เล่าเรื่องราวอัตลักษณ์ชุมชนและธรรมชาติภาคใต้ เพื่อชิงรางวัล Popular Vote
+                                    และรางวัลคณะกรรมการ
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 20 มี.ค. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดกติกา →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 20
+                                        มี.ค. 2570</span>
+                                    <a href="download.html"
+                                        class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดกติกา
+                                        →</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Item 6: Industry Robotics Challenge -->
-                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation" data-title="การแข่งขันหุ่นยนต์และระบบอัตโนมัติภาคอุตสาหกรรม sct robotics challenge 2026">
+                        <div class="col-lg-4 col-md-6 article comp-card-item" data-category="innovation"
+                            data-title="การแข่งขันหุ่นยนต์และระบบอัตโนมัติภาคอุตสาหกรรม sct robotics challenge 2026">
                             <div class="wrapper mb-4 mb-lg-0 h-100">
                                 <a href="download.html" class="text-decoration-none">
                                     <div class="position-relative">
-                                        <img loading="lazy" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&h=400&q=80" class="img-fluid mb-3 w-100" alt="SCT Robotics Challenge">
-                                        <span class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
+                                        <img loading="lazy"
+                                            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&h=400&q=80"
+                                            class="img-fluid mb-3 w-100" alt="SCT Robotics Challenge">
+                                        <span
+                                            class="badge bg-dark text-white position-absolute top-0 start-0 m-2 fw-bold shadow-sm">
                                             <i class="bi bi-gear-wide-connected me-1"></i> แข่งขันระดับชาติ
                                         </span>
                                     </div>
-                                    <h3 class="h5 text-dark font-weight-bold">การแข่งขันหุ่นยนต์และระบบอัตโนมัติภาคอุตสาหกรรม (SCT Robotics 2026)</h3>
+                                    <h3 class="h5 text-dark font-weight-bold">
+                                        การแข่งขันหุ่นยนต์และระบบอัตโนมัติภาคอุตสาหกรรม (SCT Robotics 2026)</h3>
                                 </a>
                                 <div class="news-summary text-muted mb-2">
-                                    การแข่งขันออกแบบและเขียนโปรแกรมควบคุมหุ่นยนต์เคลื่อนที่อัตโนมัติ (AGV) ปฏิบัติภารกิจจำลองระบบโลจิสติกส์ในคลังสินค้าอุตสาหกรรม 4.0
+                                    การแข่งขันออกแบบและเขียนโปรแกรมควบคุมหุ่นยนต์เคลื่อนที่อัตโนมัติ (AGV)
+                                    ปฏิบัติภารกิจจำลองระบบโลจิสติกส์ในคลังสินค้าอุตสาหกรรม 4.0
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
-                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 30 มี.ค. 2570</span>
-                                    <a href="download.html" class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดกติกา →</a>
+                                <div
+                                    class="d-flex align-items-center justify-content-between pt-2 border-top border-light-subtle">
+                                    <span class="small text-danger fw-bold"><i class="bi bi-clock me-1"></i> ปิดรับ: 30
+                                        มี.ค. 2570</span>
+                                    <a href="download.html"
+                                        class="small font-weight-bold text-primary text-decoration-none">ดาวน์โหลดกติกา
+                                        →</a>
                                 </div>
                             </div>
                         </div>
@@ -332,15 +435,18 @@
                         <i class="bi bi-trophy text-muted fs-1 mb-2"></i>
                         <h4 class="h5 text-dark font-weight-bold">ไม่พบรายการประกวดที่ค้นหา</h4>
                         <p class="text-muted small">โปรดลองค้นหาด้วยคำอื่น หรือกดปุ่ม "ล้าง" เพื่อแสดงรายการทั้งหมด</p>
-                        <button class="btn btn-sm btn-outline-secondary" onclick="clearCompSearch()">แสดงรายการทั้งหมด</button>
+                        <button class="btn btn-sm btn-outline-secondary"
+                            onclick="clearCompSearch()">แสดงรายการทั้งหมด</button>
                     </div>
 
                     <!-- Guidelines Banner -->
                     <div class="card border-0 bg-white p-4 shadow-sm mt-5">
                         <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
                             <div>
-                                <h4 class="h6 font-weight-bold text-dark mb-1">สนใจส่งโครงงานเข้าประกวด หรือต้องการสอบถามกติกาเพิ่มเติม?</h4>
-                                <p class="text-muted small mb-0">ฝ่ายพัฒนานวัตกรรมและกิจการนักศึกษา วิทยาลัยเทคโนโลยีภาคใต้ โทร. 0-7577-0136 หรืออีเมล innovation@sct.ac.th</p>
+                                <h4 class="h6 font-weight-bold text-dark mb-1">สนใจส่งโครงงานเข้าประกวด
+                                    หรือต้องการสอบถามกติกาเพิ่มเติม?</h4>
+                                <p class="text-muted small mb-0">ฝ่ายพัฒนานวัตกรรมและกิจการนักศึกษา
+                                    วิทยาลัยเทคโนโลยีภาคใต้ โทร. 0-7577-0136 หรืออีเมล innovation@sct.ac.th</p>
                             </div>
                             <a href="download.html" class="btn btn-primary text-dark fw-bold text-nowrap">
                                 <i class="bi bi-download me-1"></i> ไปที่หน้าดาวน์โหลดแบบฟอร์ม
@@ -359,8 +465,10 @@
                     <div class="region region-global-footer row g-4">
 
                         <div class="col-md-6 col-lg-3">
-                            <a class="item d-flex align-items-center gap-2 text-decoration-none text-white mb-3" href="index.html">
-                                <img class="cam-logo" alt="Southern College of Technology" src="images/sct_cambridge_logo.svg" style="filter: brightness(0) invert(1);" />
+                            <a class="item d-flex align-items-center gap-2 text-decoration-none text-white mb-3"
+                                href="index.html">
+                                <img class="cam-logo" alt="Southern College of Technology"
+                                    src="images/sct_cambridge_logo.svg" style="filter: brightness(0) invert(1);" />
                             </a>
                             <div class="content text-secondary small">
                                 <p>&copy; 2026 วิทยาลัยเทคโนโลยีภาคใต้ (เอสซีที.)</p>
@@ -371,12 +479,20 @@
 
                         <div class="col-md-6 col-lg-3">
                             <div class="content">
-                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">รายการประกวด & แข่งขัน</h3>
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">รายการประกวด & แข่งขัน
+                                </h3>
                                 <ul class="list-unstyled menu text-secondary small">
-                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การประกวดโครงงานนวัตกรรม</a></li>
-                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">ประกวดบทความวิจัยดีเด่น</a></li>
-                                    <li class="mb-2"><a href="competitions.html" class="text-secondary text-decoration-none">การแข่งขันแผนธุรกิจสตาร์ทอัพ</a></li>
-                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มการประกวด</a></li>
+                                    <li class="mb-2"><a href="competitions.html"
+                                            class="text-secondary text-decoration-none">การประกวดโครงงานนวัตกรรม</a>
+                                    </li>
+                                    <li class="mb-2"><a href="competitions.html"
+                                            class="text-secondary text-decoration-none">ประกวดบทความวิจัยดีเด่น</a></li>
+                                    <li class="mb-2"><a href="competitions.html"
+                                            class="text-secondary text-decoration-none">การแข่งขันแผนธุรกิจสตาร์ทอัพ</a>
+                                    </li>
+                                    <li class="mb-2"><a href="download.html"
+                                            class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มการประกวด</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -385,22 +501,39 @@
                             <div class="content">
                                 <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">งานวิจัยที่ตีพิมพ์</h3>
                                 <ul class="list-unstyled menu text-secondary small">
-                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">งานวิจัย & วารสารวิชาการ SCT</a></li>
-                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank" class="text-secondary text-decoration-none">SCT Conference Proceedings</a></li>
-                                    <li class="mb-2"><a href="download.html" class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย</a></li>
-                                    <li class="mb-2"><a href="research.html" class="text-secondary text-decoration-none">เป้าหมายความยั่งยืน SDGs</a></li>
+                                    <li class="mb-2"><a href="research.html"
+                                            class="text-secondary text-decoration-none">งานวิจัย & วารสารวิชาการ SCT</a>
+                                    </li>
+                                    <li class="mb-2"><a href="https://mis.sct.ac.th/app/proceedingsct/" target="_blank"
+                                            class="text-secondary text-decoration-none">SCT Conference Proceedings</a>
+                                    </li>
+                                    <li class="mb-2"><a href="download.html"
+                                            class="text-secondary text-decoration-none">ดาวน์โหลดแบบฟอร์มและเอกสารวิจัย</a>
+                                    </li>
+                                    <li class="mb-2"><a href="research.html"
+                                            class="text-secondary text-decoration-none">เป้าหมายความยั่งยืน SDGs</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-3">
                             <div class="content">
-                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">ข่าวสารและการติดต่อ</h3>
+                                <h3 class="fs-6 text-white font-weight-bold text-uppercase mb-3">ข่าวสารและการติดต่อ
+                                </h3>
                                 <ul class="list-unstyled menu text-secondary small">
-                                    <li class="mb-2"><a href="index.html#news" class="text-secondary text-decoration-none">ข่าวสารและประกาศสถาบัน</a></li>
-                                    <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none">ติดต่อเรา & แผนที่เดินทาง</a></li>
-                                    <li class="mb-2"><a href="javascript:void(0)" onclick="alert('ระบบคุ้มครองข้อมูลส่วนบุคคลตาม พ.ร.บ. PDPA พ.ศ. 2562')" class="text-secondary text-decoration-none">นโยบายความเป็นส่วนตัว (PDPA)</a></li>
-                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank" class="text-secondary text-decoration-none">เกี่ยวกับวิทยาลัยเทคโนโลยีภาคใต้</a></li>
+                                    <li class="mb-2"><a href="index.html#news"
+                                            class="text-secondary text-decoration-none">ข่าวสารและประกาศสถาบัน</a></li>
+                                    <li class="mb-2"><a href="contact.html"
+                                            class="text-secondary text-decoration-none">ติดต่อเรา & แผนที่เดินทาง</a>
+                                    </li>
+                                    <li class="mb-2"><a href="javascript:void(0)"
+                                            onclick="alert('ระบบคุ้มครองข้อมูลส่วนบุคคลตาม พ.ร.บ. PDPA พ.ศ. 2562')"
+                                            class="text-secondary text-decoration-none">นโยบายความเป็นส่วนตัว (PDPA)</a>
+                                    </li>
+                                    <li class="mb-2"><a href="https://www.sct.ac.th" target="_blank"
+                                            class="text-secondary text-decoration-none">เกี่ยวกับวิทยาลัยเทคโนโลยีภาคใต้</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -481,4 +614,5 @@
         }
     </script>
 </body>
+
 </html>
